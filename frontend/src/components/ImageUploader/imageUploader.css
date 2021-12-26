@@ -30,7 +30,41 @@
     height: 100%;
 }
 .upload_general_container_drag_and_drop{
+    margin-top: 30px;
     width: 100%;
-    height: 100%;
-    border: #4F4F4F 2px dashed;
+    height: 65%;
+    background: #F6F8FB;
+    border: 1px dashed #97BEF4;
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+.upload_general_container_drag_and_drop img {
+    display: block;
+    width: 110px;
+    margin: 30px auto 0;
+}
+.upload_general_container_form p{
+    margin-top: 35px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.035em;
+    color: #BDBDBD;
+    text-align: center;
+}
+.upload_general_container_form>p{
+    margin-top: 20px;
+}
+.upload_general_container_form_btn{
+    display: block;
+    margin: 20px auto 0;
+    padding: 8px 16px;
+    background: #2F80ED;
+    border-radius: 8px;
+    border: none;
+    color: white;
+}
+.upload_general_container_form_btn:hover{
+    transform: scale(1.06);
+    transition: all 5ms ease-out;
 }

@@ -1,12 +1,14 @@
 import { useState } from "react";
 
 const useMain = () => {
-	const [imageData, setImageData] = useState();
-	const [loading, setLoding] = useState(false);
+    
+	const [loading, setLoading] = useState(false);
+    const [errors,setErrors] = useState({ has:false, errors:[]})
 
 	return {
 		loading,
-		imageData,
+        setLoading,
+        setErrors,
 	};
 };
 
