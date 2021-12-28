@@ -14,7 +14,7 @@ const useApi = () => {
 		if (params !== undefined) {
 			try {
 				const result = await axios.request(params);
-				setResponse(result.data);
+				setResponse(result);
 			} catch (error) {
 				setError(error);
 			} finally {

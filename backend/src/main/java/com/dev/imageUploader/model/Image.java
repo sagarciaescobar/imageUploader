@@ -7,7 +7,6 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Lob;
 
 @Entity
 @Getter
@@ -22,11 +21,9 @@ public class Image {
     private String fileType;
     private String fileUrl;
 
-    public Image( String fileName, String fileType, String fileUrl) {
+    public Image(String fileName, String fileType) {
         this.fileName = fileName;
         this.fileType = fileType;
-        this.fileUrl = fileUrl;
     }
-
-    public Image(){}
+    public Image(){};
 }

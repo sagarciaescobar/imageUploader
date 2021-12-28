@@ -2,6 +2,7 @@ package com.dev.imageUploader.service;
 
 import com.dev.imageUploader.model.Image;
 import com.dev.imageUploader.repository.IImageRepository;
+import com.dev.imageUploader.util.ImageConversion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.stereotype.Service;
@@ -11,32 +12,40 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
+import java.util.stream.Stream;
 
 @Service
 public class ImageService {
 
     @Autowired
     private IImageRepository imageRepository;
+    private final ImageConversion imageConversion = new ImageConversion();
 
-    private final String FILE_DIRECTORY= "./storage/uploaded_";
-
-    public void uploadImage(MultipartFile file){
-
-        try {
-            byte[] data = file.getBytes();
-            Path path = Paths.get(FILE_DIRECTORY + file.getOriginalFilename());
-            Files.write(path,data);
-            Image image = new Image( file.getOriginalFilename(),file.getContentType(),path.toString());
-            imageRepository.save(image);
+    public Image uploadImage(MultipartFile file) throws Exception {
+        String fileExtension = imageConversion.imageExtension(file.getOriginalFilename());
+        Stream<Path> storage = Files.list(Path.of("./storage"));
+        if(storage.count()>15){
+            List<Image> images = imageRepository.findAll();
+            for (Image image: images) {
+                Files.deleteIfExists(Paths.get("./storage/uploaded_"+ image.getFileId()+ fileExtension));
+                imageRepository.deleteAll();
+            }
         }
-        catch (IOException e){
-            e.printStackTrace();
-        }
-    };
+        Image image = new Image( file.getOriginalFilename(),file.getContentType());
+        Image imageSave = imageRepository.save(image);
+        String FILE_DIRECTORY = "./storage/uploaded_";
+        Path path = Paths.get(FILE_DIRECTORY + imageSave.getFileId() + fileExtension);
+        byte[] data = file.getBytes();
+        Files.write(path,data);
+        image.setFileUrl(path.toString());
+        image.setFileId(imageSave.getFileId());
+        Image image1 = imageRepository.save(image);
+        return image1;
+    }
 
     public ByteArrayResource downloadImage(String id) throws IOException {
         Image image = imageRepository.getById(id);
-        ByteArrayResource inputStream = new ByteArrayResource(Files.readAllBytes(Paths.get(image.getFileUrl())));
-        return inputStream;
+        return new ByteArrayResource(Files.readAllBytes(Paths.get(image.getFileUrl())));
     }
 }
