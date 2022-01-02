@@ -5,6 +5,7 @@ import Error from "../../components/Error/Error";
 
 import "./main.css";
 import useMain from "./useMain";
+import Footer from "../../components/Footer/Footer";
 
 export default function Main() {
 	const { error, getInputProps, getRootProps, open, isDragActive, loading } = useMain();
@@ -20,6 +21,7 @@ export default function Main() {
 					{...{ open, isDragActive, getInputProps, getRootProps }}
 				/>
 			)}
+			<Footer/>
 		</div>
 	);
 }
