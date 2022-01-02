@@ -11,17 +11,15 @@ const useMain = () => {
 	const { response, error, setParamas, setLoading, loading } = useApi();
 	const acceptedFiles = "image/jpeg, image/png";
 	const onDrop = useCallback((acceptedFiles, rejectedFiles) => {
-		console.log(acceptedFiles)
 		if (acceptedFiles.length === 1) {
-			console.log("funciono");
 			const bodyFormData = new FormData();
 			setLoading(true);
 			bodyFormData.append("file", acceptedFiles[0]);
 			setParamas({
 				method: "post",
 				url: "/upload",
-				data: bodyFormData,
 				headers: { "Content-Type": "multipart/form-data" },
+				data: bodyFormData,
 			});
 		}
 		if (rejectedFiles.length > 0) {
@@ -38,11 +36,10 @@ const useMain = () => {
 	});
 
 	useEffect(() => {
-		if(response){
-			if(response.status === 200) navigate(`/${response.data.fileId}`)
+		if (response) {
+			if (response.status === 200) navigate(`/${response.data.fileId}`);
 		}
-	}, [response])
-
+	}, [response]);
 
 	return {
 		error,
@@ -50,7 +47,7 @@ const useMain = () => {
 		getRootProps,
 		open,
 		isDragActive,
-		loading
+		loading,
 	};
 };
 

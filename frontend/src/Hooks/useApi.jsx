@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 const useApi = () => {
-	axios.defaults.baseURL = "https://dev-image-uploader.herokuapp.com/";
+	axios.defaults.baseURL = "http://dev-image-uploader.herokuapp.com/";
 	
 	const [response, setResponse] = useState(undefined);
 	const [error, setError] = useState("");
