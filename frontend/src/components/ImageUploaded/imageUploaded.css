@@ -1,13 +1,13 @@
 .uploaded_image_container{
-    width: 400px;
-    height: 450px;
+    width: 40rem;
+    height: 45rem;
     background: #FFFFFF;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
+    box-shadow: 0px 0.4rem 1.2rem rgba(0, 0, 0, 0.1);
+    border-radius: 1.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 32px;
+    padding: 4rem 3.2rem;
 }
 
 .uploaded_image_container_icon{
@@ -15,38 +15,38 @@
 }
 
 .uploaded_image_container_title{
-    margin-top: 12px;
+    margin-top: 1.2rem;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
     text-align: center;
     letter-spacing: -0.035em;
     color: #4F4F4F;
 }
 .uploaded_image_container_img{
-    margin-top: 25px;
+    margin-top: 2.5rem;
     width: 100%;
-    height: 225px;
-    border-radius: 12px;
+    height: 22.5rem;
+    border-radius: 1.2rem;
 }
 .uploaded_image_container_link{
-    margin-top: 25px;
+    margin-top: 2.5rem;
     width: 100%;
-    height: 35px;
+    height: 3.5rem;
     background: #F6F8FB;
     border: 1px solid #E0E0E0;
-    border-radius: 8px;
+    border-radius: 0.8rem;
     display: flex;
     justify-content: center;
     align-items: center-;
-    padding: 2px;
+    padding: 0.2rem;
 }
 .uploaded_image_container_link>p{
     font-style: normal;
     font-weight: 500;
-    font-size: 8px;
-    line-height: 22px;
+    font-size: 0.8rem;
+    line-height: 2.2rem;
     text-align: center;
     letter-spacing: -0.035em;
     color: #4F4F4F;
@@ -59,13 +59,13 @@
 .uploaded_image_container_link_copy{
     width: 20%;
     background: #2F80ED;
-    border-radius: 8px;
+    border-radius: 0.8rem;
     color: white;
     border: none;
     font-style: normal;
     font-weight: 500;
-    font-size: 8px;
-    line-height: 22px;
+    font-size: 0.8rem;
+    line-height: 2.2rem;
     text-align: center;
     letter-spacing: -0.035em;
 }
@@ -75,13 +75,13 @@
 .uploaded_image_container_link_copied{
     background: #219653;
     width: 20%;
-    border-radius: 8px;
+    border-radius: 0.8rem;
     color: white;
     border: none;
     font-style: normal;
     font-weight: 500;
-    font-size: 8px;
-    line-height: 22px;
+    font-size: 0.8rem;
+    line-height: 2.2rem;
     text-align: center;
     letter-spacing: -0.035em;
 }

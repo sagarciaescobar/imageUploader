@@ -1,27 +1,27 @@
 .upload_general_container{
-    width: 402px;
-    height: 469px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 12px 0px #0000001A;
+    width: 40.2rem;
+    height: 46.9rem;
+    border-radius: 1.2rem;
+    box-shadow: 0px 0.4rem 1.2rem 0px #0000001A;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 36px 32px;
+    padding: 3.6rem 3.2rem;
 }
 .upload_general_container h1{
     font-weight: 500;
     font-style: normal;
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
     letter-spacing: -0.035em;
     color: #4F4F4F;
 }
 .upload_general_container h2{
-    margin-top: 16px;
+    margin-top: 1.6rem;
     font-weight: 500;
     font-style: normal;
-    font-size: 10px;
-    line-height: 15px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     letter-spacing: -0.035em;
     color: #828282;
 }
@@ -30,37 +30,37 @@
     height: 100%;
 }
 .upload_general_container_drag_and_drop{
-    margin-top: 30px;
+    margin-top: 3rem;
     width: 100%;
     height: 65%;
     background: #F6F8FB;
     border: 1px dashed #97BEF4;
     box-sizing: border-box;
-    border-radius: 12px;
+    border-radius: 1.2rem;
 }
 .upload_general_container_drag_and_drop img {
     display: block;
-    width: 110px;
-    margin: 30px auto 0;
+    width: 11rem;
+    margin: 3rem auto 0;
 }
 .upload_general_container_form p{
-    margin-top: 35px;
+    margin-top: 3.5rem;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
     letter-spacing: -0.035em;
     color: #BDBDBD;
     text-align: center;
 }
 .upload_general_container_form>p{
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 .upload_general_container_form_btn{
     display: block;
-    margin: 20px auto 0;
-    padding: 8px 16px;
+    margin: 2rem auto 0;
+    padding: 0.8rem 1.6rem;
     background: #2F80ED;
-    border-radius: 8px;
+    border-radius: 0.8rem;
     border: none;
     color: white;
 }

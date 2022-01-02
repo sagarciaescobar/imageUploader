@@ -7,18 +7,20 @@ import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 
-@CrossOrigin(origins = {"https://sagarciaescobar.github.io/imageUploader"})
-@RestController
+@Controller
 public class ImageController {
 
     @Autowired
     private ImageService imageService;
 
+
+    @CrossOrigin(origins = {"https://localhost:3000/"},methods = {RequestMethod.GET, RequestMethod.POST})
     @PostMapping("/upload")
     public ResponseEntity<?> fileUpload(@RequestParam("file") MultipartFile file) throws Exception {
         Image image = imageService.uploadImage(file);

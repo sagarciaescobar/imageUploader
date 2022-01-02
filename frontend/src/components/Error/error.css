@@ -1,10 +1,10 @@
 .error_container{
-    width: 400px;
-    height: 143px;
+    width: 40rem;
+    height: 14.3rem;
     background: #FFFFFF;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    padding: 36px 32px;
+    box-shadow: 0px 0.4rem 1.2rem rgba(0, 0, 0, 0.1);
+    border-radius: 1.2rem;
+    padding: 3.6rem 3.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,12 +13,12 @@
 .error_container_title{
     text-align: left;
     font-weight: 600;
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
     /* identical to box height */
     letter-spacing: -0.035em;
 }
 .error_container_icon{
     height: 80%;
-    margin-right: 20px;
+    margin-right: 2rem;
 }

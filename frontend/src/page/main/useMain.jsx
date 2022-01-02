@@ -37,7 +37,7 @@ const useMain = () => {
 
 	useEffect(() => {
 		if (response) {
-			if (response.status === 200) navigate(`/${response.data.fileId}`);
+			if (response.status === 200) navigate(`/imageUploader/${response.data.fileId}`);
 		}
 	}, [response]);
 

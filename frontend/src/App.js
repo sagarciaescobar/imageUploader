@@ -7,7 +7,7 @@ function App() {
 		<BrowserRouter>
 			<Routes>
 				<Route index path='/imageUploader/' element={<Main />} />
-				<Route path='/imageUploader/:imageId' element={<ImageUploadedPage />} />
+				<Route path='/imageUploader/:imageId' element={<ImageUploadedPage title="Uploded image" />} />
 			</Routes>
 		</BrowserRouter>
 	);

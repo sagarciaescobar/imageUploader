@@ -5,3 +5,24 @@
 	box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+html{
+	font-size: 10px;
+}
+
+@media screen and (max-width:900px) and (orientation:portrait) {
+	html{
+		font-size: 9px;
+	}
+}
+
+@media screen and (max-width:600px) {
+	html{
+		font-size: 8px;
+	}
+}
+
+@media screen and (max-width:926px) and (orientation:landscape) {
+	html{
+		font-size: 7px;
+	}
+}
