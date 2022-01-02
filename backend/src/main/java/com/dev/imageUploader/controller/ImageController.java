@@ -12,7 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 
-
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class ImageController {
 

@@ -3,6 +3,7 @@ package com.dev.imageUploader.service;
 import com.dev.imageUploader.model.Image;
 import com.dev.imageUploader.repository.IImageRepository;
 import com.dev.imageUploader.util.ImageConversion;
+import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 @Service
+@Log4j
 public class ImageService {
 
     @Autowired
@@ -23,6 +25,7 @@ public class ImageService {
     private final ImageConversion imageConversion = new ImageConversion();
 
     public Image uploadImage(MultipartFile file) throws Exception {
+        log.info("Cargando imagen");
         String fileExtension = imageConversion.imageExtension(file.getOriginalFilename());
         Stream<Path> storage = Files.list(Path.of("./storage"));
         if(storage.count()>15){
@@ -45,6 +48,7 @@ public class ImageService {
     }
 
     public ByteArrayResource downloadImage(String id) throws IOException {
+        log.info("descargando imagen");
         Image image = imageRepository.getById(id);
         return new ByteArrayResource(Files.readAllBytes(Paths.get(image.getFileUrl())));
     }

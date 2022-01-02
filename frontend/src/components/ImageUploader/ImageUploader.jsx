@@ -20,7 +20,7 @@ export default function ImageUploader({ getInputProps, getRootProps ,open, isDra
 					)}
 				</div>
 				<p>Or</p>
-				<button className='upload_general_container_form_btn' onClick={open}>
+				<button type="button" className='upload_general_container_form_btn' onClick={open}>
 					Choose a file
 				</button>
 			</form>

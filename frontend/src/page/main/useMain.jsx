@@ -11,6 +11,7 @@ const useMain = () => {
 	const { response, error, setParamas, setLoading, loading } = useApi();
 	const acceptedFiles = "image/jpeg, image/png";
 	const onDrop = useCallback((acceptedFiles, rejectedFiles) => {
+		console.log(acceptedFiles)
 		if (acceptedFiles.length === 1) {
 			console.log("funciono");
 			const bodyFormData = new FormData();
