@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const useApi = () => {
-	axios.defaults.baseURL = "https://dev-image-uploader.herokuapp.com/";
+	axios.defaults.baseURL = "https://sa-image-uploader.herokuapp.com/";
 
 	const [response, setResponse] = useState(undefined);
 	const [error, setError] = useState("");
